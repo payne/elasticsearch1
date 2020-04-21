@@ -38,6 +38,8 @@ public class ElasticsearchApplication implements CommandLineRunner {
         qb.must(QueryBuilders.matchAllQuery());
         searchSourceBuilder.query(qb);
         searchRequest.source(searchSourceBuilder);
+        System.out.println("searchRequest="+searchRequest);
+        System.out.println("searchRequest.source()="+searchRequest.source());
         SearchResponse searchResponse = client.search(searchRequest, options);
         long numHits = searchResponse.getHits().totalHits;
         System.out.println("numHits="+numHits);
