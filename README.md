@@ -1,5 +1,7 @@
 # Elastic Search Learning Toy
 
+On a brand new Ubuntu 20.04 LTS computer you'll need to run `sudo sysctl -w vm.max_map_count=262144`
+
 Steps to try this out:
 1. `docker-compose up -d`
 1.  Wait about five to ten minutes for Kibana to start (it's slow to start) and then visit http://localhost:5601/
